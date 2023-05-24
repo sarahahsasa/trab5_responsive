@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #16110B;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+header{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 20px 12px;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Didot';
+    background:  #3FBF83;
+    height: 10vh;
+  }
+  
+  main {
+    background: url("../img/Você\ conhece\ o\ Abismo\ Anhumas.png") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+  
+  .nav-list {
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #3FBF83;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  .language {
+    position: relative;
+    width: 120px;
+    margin-left: 40px;
+    font-weight: bold;
+  }
+  
+  .language-selected {
+    display: flex;   
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .language ul {
+    position: absolute;
+    width: 140px;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    padding-top: 10px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  
+  .language ul li {
+    list-style: none;
+  }
+  
+  .language ul li a {
+    display: block;
+    color:   #3FBF83;
+    padding: 5px 10px;
+    font-size: 18px;
+    background-color: #FDF5E6;
+  }
+  
+  .language ul li:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .language ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .language:hover ul {
+  display: block;
+  }
+
+
